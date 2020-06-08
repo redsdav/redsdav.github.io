@@ -1,0 +1,405 @@
+<!--Rossi Davide 4A - A.S 2019-2020-->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="index.html">
+      <img src="logo.svg" width="112" height="28">
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+
+      <a class="navbar-item" href="index.html" id="quiz1nav">
+        Quiz1
+      </a>
+
+      <a class="navbar-item" href="index.html" id="quiz2nav">
+        Quiz 2
+      </a>
+
+    </div>
+
+
+  </div>
+</nav>
+
+
+
+  <section class="section">
+   <div class="container">
+     <nav class="panel is-primary">
+      <p class="panel-heading" id="titolo">Benvenuto nel Quiz </p>
+      <div class="panel-block">
+
+<div class="columns" id="login">
+
+    <div class="column">
+      <div id="errore" class="is-danger has-background-danger has-text-centered has-text-weight"></div>
+
+      <form action=page2.html id="mioForm">
+        <div class="field">
+          <label class="label">Nome </label>
+          <div class="control has-icons-left">
+          <input class="input" type="text" id="nome">
+          <span class="icon is-small is-left">
+            <i class="fas fa-user"></i>
+          </span>
+          </div>
+        </div>
+
+        <div class="field">
+        <label class="label">E-mail </label>
+          <div class="control has-icons-left">
+          <input class="input" type="text" id="email">
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+          </div>
+        </div>
+
+        <div class="field">
+        <label class="label">Eta </label>
+          <div class="control has-icons-left">
+          <input class="input" type="text" id="eta">
+          <span class="icon is-small is-left">
+            <i class="fas fa-male"></i>
+          </span>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control">
+            <label class="checkbox">
+            <input type="checkbox" id="privacy">
+            Accetta <a id="privacy2" href="#">informativa Privacy</a>
+            </label>
+            </div>
+          </div>
+
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-link" id="gioca">Gioca!</button>
+            </div>
+            <div class="control">
+              <input type="reset" class="button is-link is-light" value="Cancella">
+          </div>
+          </div>
+      </form>
+    </div>
+
+      <div class="column">
+        <div class="notification is-success">
+            <p> Benvenuto!
+            Ti trovi nella pagine di accesso di uno dei Quiz da me proposti. </p>
+            <p> Ricorda di selezionare nella navbar uno dei due quiz <strong>Quiz 1</strong> oppure <strong>Quiz 2</strong>. </p>
+            <p>Le due versioni del Quiz differiscono tra loro per la modalità di visualizzazione delle risposte. Il Quiz 1 mostra le risposte giuste colorando lo sfondo della casella di testo in verde o rosso in base alla correttezza della risposta, mentre il Quiz 2 mostra le risposte date dall'utente colorando lo sfondo della casella di testo in base alla correttezza della risposta.</p>
+
+            <p>Davide Rossi - 4A</p>
+        </div>
+
+     </div>
+  </div>
+
+    <div id="quiz">
+          <progress id="bar" class="progress is-medium is-danger" value="60" max="60" >60</progress>
+        <div id="errore2" class="is-danger has-background-warning has-text-centered has-text-weight"></div>
+
+        <div class="field">
+          <label class="label">1- Qual'è il quotidiano piu' venduto in USA </label>
+            <div class="control has-icons-left">
+            <input class="input is-uppercase" type="text" id="uno">
+            <span class="icon is-small is-left">
+              <i class="fas fa-question-circle"></i>
+            </span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">2- Luogo di origine dei Tarocchi </label>
+              <div class="control has-icons-left">
+              <input class="input is-uppercase" type="text" id="due">
+              <span class="icon is-small is-left">
+                <i class="fas fa-question-circle"></i>
+              </span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">3- Quando venne convocato il Congresso di Berlino?</label>
+              <div class="control">
+                <label class="checkbox">
+                  <input type="checkbox" id="tre1">
+                  1878
+                </label>
+              </div>
+              <div class="control">
+                <label class="checkbox">
+                  <input type="checkbox" id="tre2">
+                  1947
+                </label>
+              </div>
+              <div class="control">
+                <label class="checkbox">
+                  <input type="checkbox" id="tre3">
+                  1919
+                </label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">4- Regione Francese della Lavanda</label>
+              <div class="control has-icon-left">
+                <div class="select">
+                  <select id="quattro">
+                    <option value="loira">Loira</option>
+                    <option value="corsica">Corsica</option>
+                    <option value="borgogna">Borgogna</option>
+                    <option value="provenza">Provenza</option>
+                  </select>
+                </div>
+                <span class="icon is-small is-left">
+                  <i class="fas fa-question-circle"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">5- Cosa ha scoperto Isaac Newton? </label>
+              <div class="control has-icon-left">
+                <div class="select">
+                  <select id="cinque">
+                    <option value="atomo">L’atomo</option>
+                    <option value="lampadina">La lampadina</option>
+                    <option value="positroni">I positroni</option>
+                    <option value="forzagravita">La forza di gravità</option>
+                  </select>
+                </div>
+                <span class="icon is-small is-left">
+                  <i class="fas fa-question-circle"></i>
+                </span>
+              </div>
+            </div>
+
+          <div class="field">
+              <label class="label">6- Quali sono i fattori che caratterizzano la modernizzazione?</label>
+              <div class="control">
+                <label class="checkbox">
+                  <input type="checkbox">
+                Globalizzazione del mercato e sviluppo del settore terziario.
+                </label>
+              </div>
+              <div class="control">
+                <label class="checkbox">
+                  <input type="checkbox">
+                Stasi tecnologica, autarchia, assenza di intervento statale nell'economia, esasperazione del sentimento religioso.
+                </label>
+              </div>
+              <div class="control">
+                <label class="checkbox">
+                  <input type="checkbox" id="sei">
+                  L'innovazione tecnologica, l'internazionalizzazione dei mercati, l'urbanizzazione, l'intervento statale nell'economia, la cultura di massa, la secolarizzazione, i valori democratici.
+                </label>
+              </div>
+            </div>
+
+            
+            <div class="field is-grouped">
+              <div class="control">
+                <button class="button is-link" id="controlla">Controlla</button>
+              </div>
+            </div>
+  </div>
+
+	
+
+    <div id="quiz2">
+
+    	<div id="messaggio_spostato"></div>
+
+          <progress id="bar2" class="progress is-medium is-danger" value="60" max="60" >60</progress>
+        <div id="errore2" class="is-danger has-background-warning has-text-centered has-text-weight"></div>
+
+        <div class="field">
+          <label class="label">1- Giornalista che segue il capo dello stato </label>
+            <div class="control has-icons-left">
+            <input class="input is-uppercase" type="text" id="uno2">
+            <span class="icon is-small is-left">
+              <i class="fas fa-question-circle"></i>
+            </span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">2- Nel 1901 effettuò la prima trasmissione radio </label>
+              <div class="control has-icons-left">
+              <input class="input is-uppercase" type="text" id="due2">
+              <span class="icon is-small is-left">
+                <i class="fas fa-question-circle"></i>
+              </span>
+              </div>
+            </div>
+
+            <div class="field">
+          <label class="label">3- La pianta gialla cantata dal Leopardi </label>
+            <div class="control has-icons-left">
+            <input class="input is-uppercase" type="text" id="tre22">
+            <span class="icon is-small is-left">
+              <i class="fas fa-question-circle"></i>
+            </span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">4- Mancini faceva coppia con lui nella sampdoria </label>
+              <div class="control has-icons-left">
+              <input class="input is-uppercase" type="text" id="quattro2">
+              <span class="icon is-small is-left">
+                <i class="fas fa-question-circle"></i>
+              </span>
+              </div>
+            </div>
+
+            <div class="field">
+          <label class="label">5- Quale film Walt Disney realizzò nel 1937 </label>
+            <div class="control has-icons-left">
+            <input class="input is-uppercase" type="text" id="cinque2">
+            <span class="icon is-small is-left">
+              <i class="fas fa-question-circle"></i>
+            </span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">6- Primo nome di Cavour </label>
+              <div class="control has-icons-left">
+              <input class="input is-uppercase" type="text" id="sei2">
+              <span class="icon is-small is-left">
+                <i class="fas fa-question-circle"></i>
+              </span>
+              </div>
+            </div>
+
+
+            
+            <div class="field is-grouped">
+              <div class="control">
+                <button class="button is-link" id="controlla2">Controlla</button>
+              </div>
+              <div class="control">
+              	<button class="button is-link" id="riprova">Riprova!</button>
+              </div>
+            </div>
+  </div>
+
+
+
+
+<section>
+  <article class="message is-danger" id="messaggio1"> 
+    <div class="message-header">
+      <p id="msg1"></p>
+    </div>
+    <div class="message-body" id="msgB1"></div>
+    <fieldset disabled>
+    </fieldset>
+  </article>
+
+
+  <article class="message is-warning" id="messaggio2"> 
+    <div class="message-header">
+      <p id="msg2"></p>
+    </div>
+    <div class="message-body" id="msgB2"></div>
+  </article>
+
+  <article class="message is-success" id="messaggio3"> 
+    <div class="message-header">
+      <p id="msg3"></p>
+    </div>
+    <div class="message-body" id="msgB3"></div>
+  </article>
+
+<div id="risposte">
+
+  <label class="label">1- Qual'è il quotidiano piu' venduto in USA </label>
+  <div class="control">
+    <textarea id="ris1" class="textarea " readonly rows="1">New York Times</textarea>
+  </div>
+
+  <label class="label">2- Luogo di origine dei Tarocchi </label>
+  <div class="control">
+    <textarea id="ris2" class="textarea" readonly rows="1" >Italia</textarea>
+  </div>
+
+  <label class="label">3- Quando venne convocato il Congresso di Berlino?</label>
+  <div class="control">
+    <textarea id="ris3" class="textarea" readonly rows="1" >1878</textarea>
+  </div>
+
+  <label class="label">4- Regione Francese della Lavanda </label>
+  <div class="control">
+    <textarea id="ris4" class="textarea" readonly rows="1" >Provenza</textarea>
+  </div>
+
+  <label class="label">5- Cosa ha scoperto Isaac Newton?</label>
+  <div class="control">
+    <textarea id="ris5" class="textarea" readonly rows="1" >La forza di gravità</textarea>
+  </div>
+
+  <label class="label">6- Quali sono i fattori che caratterizzano la modernizzazione</label>
+  <div class="control">
+    <textarea id="ris6" class="textarea" readonly rows="2" >L'innovazione tecnologica, l'internazionalizzazione dei mercati, l'urbanizzazione, l'intervento statale nell'economia, la cultura di massa, la secolarizzazione, i valori democratici.</textarea>
+  </div>
+
+
+
+  <p></p>
+
+ <div class="field is-grouped">
+  <div class="control">
+  <button class="button is-link" id="riprova1">Riprova!</button>
+ </div>
+
+</div>
+</div>
+
+
+</section>
+</div>
+
+
+  </nav>
+
+
+
+    <footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Quiz!</strong> by Davide</a>. 
+  </p>
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+  </section>
+  </body>
+</html>
